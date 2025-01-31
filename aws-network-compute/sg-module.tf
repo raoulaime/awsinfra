@@ -21,7 +21,7 @@ module "private_ec2_sg" {
   description = "Open SSH, HTTP(S), ICMP on private instances from VPC"
   vpc_id      = module.vpc.vpc_id
 
-  ingress_rules       = ["ssh-tcp", "http-80-tcp", "all-icmp","https-443-tcp"]
+  ingress_rules       = ["ssh-tcp", "http-80-tcp", "all-icmp", "https-443-tcp"]
   ingress_cidr_blocks = [module.vpc.vpc_cidr_block]
 
   egress_rules = ["all-all"]
