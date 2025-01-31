@@ -22,7 +22,7 @@
 | <a name="module_ec2_public"></a> [ec2\_public](#module\_ec2\_public) | terraform-aws-modules/ec2-instance/aws | >=5.2.1 |
 | <a name="module_private_ec2_sg"></a> [private\_ec2\_sg](#module\_private\_ec2\_sg) | terraform-aws-modules/security-group/aws | >=5.1.0 |
 | <a name="module_public_ec2_sg"></a> [public\_ec2\_sg](#module\_public\_ec2\_sg) | terraform-aws-modules/security-group/aws | >=5.1.0 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | >5.1.1 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | >=5.1.1 |
 
 ## Resources
 
