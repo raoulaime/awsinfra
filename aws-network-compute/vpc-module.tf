@@ -1,6 +1,6 @@
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = ">5.1.1"
+  version = ">=5.1.1"
 
   name = "${local.name}-${var.vpc_name}"
   cidr = var.vpc_cidr_block
@@ -25,7 +25,6 @@ module "vpc" {
   tags     = local.common_tags
   vpc_tags = local.common_tags
 
-  # Additional Tags to Subnets
   public_subnet_tags = {
     Type = "Public Subnets"
   }
