@@ -76,3 +76,14 @@ data "aws_ami" "centos8" {
     values = ["ebs"]
   }
 }
+
+data "aws_ami" "ubuntu" {
+  most_recent = true
+
+  filter {
+    name   = "name"
+    values = ["*ubuntu*-amd64-server-*"]
+  }
+
+  owners = ["099720109477"]  # Canonical owner ID for Ubuntu AMIs
+}
