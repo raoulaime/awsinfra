@@ -20,5 +20,4 @@ variable "business_divsion" {
 variable "backend_bucket_name" {
   description = "Backend Bucket Name"
   type        = string
-  default     = "tfbackends3lab01"
 }
