@@ -29,7 +29,7 @@
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | Region in which AWS Resources to be created | `string` | `"us-east-1"` | no |
-| <a name="input_backend_bucket_name"></a> [backend\_bucket\_name](#input\_backend\_bucket\_name) | Backend Bucket Name | `string` | `"tfbackends3lab01"` | no |
+| <a name="input_backend_bucket_name"></a> [backend\_bucket\_name](#input\_backend\_bucket\_name) | Backend Bucket Name | `string` | n/a | yes |
 | <a name="input_business_divsion"></a> [business\_divsion](#input\_business\_divsion) | Business Division this Infrastructure belongs | `string` | `"it"` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment Variable used as a prefix | `string` | `"dev"` | no |
 
