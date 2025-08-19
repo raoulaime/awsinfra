@@ -4,13 +4,13 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.9.4 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >=5.82.2 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.9.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >=5.82.2 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.9.0 |
 | <a name="provider_local"></a> [local](#provider\_local) | n/a |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | n/a |
 
@@ -18,7 +18,7 @@
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ec2_private"></a> [ec2\_private](#module\_ec2\_private) | terraform-aws-modules/ec2-instance/aws | >=5.2.1 |
+| <a name="module_ec2_private"></a> [ec2\_private](#module\_ec2\_private) | terraform-aws-modules/ec2-instance/aws | >=6.0.2 |
 | <a name="module_ec2_public"></a> [ec2\_public](#module\_ec2\_public) | terraform-aws-modules/ec2-instance/aws | >=5.2.1 |
 | <a name="module_private_ec2_sg"></a> [private\_ec2\_sg](#module\_private\_ec2\_sg) | terraform-aws-modules/security-group/aws | >=5.1.0 |
 | <a name="module_public_ec2_sg"></a> [public\_ec2\_sg](#module\_public\_ec2\_sg) | terraform-aws-modules/security-group/aws | >=5.1.0 |
@@ -28,17 +28,17 @@
 
 | Name | Type |
 |------|------|
-| [aws_eip.bastion_eip](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/eip) | resource |
-| [aws_key_pair.key_pair](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair) | resource |
+| [aws_eip.bastion_eip](https://registry.terraform.io/providers/hashicorp/aws/6.9.0/docs/resources/eip) | resource |
+| [aws_key_pair.key_pair](https://registry.terraform.io/providers/hashicorp/aws/6.9.0/docs/resources/key_pair) | resource |
 | [local_file.ssh_key](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
 | [tls_private_key.tls_private_key](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
-| [aws_ami.amazon_linux_2](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
-| [aws_ami.amazon_linux_23](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
-| [aws_ami.centos8](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
-| [aws_ami.centos9](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
-| [aws_ami.rhel9](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
-| [aws_ami.ubuntu](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
-| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
+| [aws_ami.amazon_linux_2](https://registry.terraform.io/providers/hashicorp/aws/6.9.0/docs/data-sources/ami) | data source |
+| [aws_ami.amazon_linux_23](https://registry.terraform.io/providers/hashicorp/aws/6.9.0/docs/data-sources/ami) | data source |
+| [aws_ami.centos8](https://registry.terraform.io/providers/hashicorp/aws/6.9.0/docs/data-sources/ami) | data source |
+| [aws_ami.centos9](https://registry.terraform.io/providers/hashicorp/aws/6.9.0/docs/data-sources/ami) | data source |
+| [aws_ami.rhel9](https://registry.terraform.io/providers/hashicorp/aws/6.9.0/docs/data-sources/ami) | data source |
+| [aws_ami.ubuntu](https://registry.terraform.io/providers/hashicorp/aws/6.9.0/docs/data-sources/ami) | data source |
+| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/6.9.0/docs/data-sources/availability_zones) | data source |
 
 ## Inputs
 
