@@ -1,7 +1,7 @@
 module "ec2_private" {
   depends_on = [module.vpc, module.private_ec2_sg]
   source     = "terraform-aws-modules/ec2-instance/aws"
-  version    = ">=5.2.1"
+  version    = ">=6.0.2"
 
   for_each = { for i in range(var.private_instance_count) : tostring(i) => i }
 
