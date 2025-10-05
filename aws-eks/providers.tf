@@ -12,7 +12,7 @@ terraform {
 provider "aws" {
   region  = var.aws_region
   profile = "default"
-  alias = "virginia"
+  alias   = "virginia"
 }
 
 provider "helm" {

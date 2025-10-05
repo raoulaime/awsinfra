@@ -39,7 +39,7 @@ output "operator_roles_arn" {
 }
 
 output "password" {
-  value     = resource.random_password.password.result
+  value       = resource.random_password.password.result
   description = "Password for the default user created in the htpasswd identity provider."
-  sensitive = true
+  sensitive   = true
 }
