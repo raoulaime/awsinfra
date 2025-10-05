@@ -1,4 +1,4 @@
-# Terraform vSphere & AWS Infrastructure
+# AWS Infrastructure
 
 Welcome to this repository! 🚀
 
