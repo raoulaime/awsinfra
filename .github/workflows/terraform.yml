@@ -1,11 +1,12 @@
----
 name: 'Terraform'
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
-on: push
-
-env:
-  TF_LOG: INFO
-  TF_INPUT: false
+permissions:
+  contents: read
 
 jobs:
   terraform:
@@ -18,20 +19,45 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: actions/checkout@v4
 
       - name: Terraform Init
-        id: init
         run: terraform init
 
       - name: Terraform Format
-        id: fmt
-        run: terraform fmt -check
+        run: terraform fmt -check -recursive -no-color
 
-      - name: Terraform Validate
-        id: validate
-        if: (success() || failure())
-        run: terraform validate
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'config'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+
+      - name: Upload Trivy results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: 'trivy-results.sarif'
+
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Render terraform docs and push changes back to PR
+        uses: terraform-docs/gh-actions@main
+        with:
+          working-dir: ./aws-*/
+          output-file: README.md
+          output-method: inject
+          git-push: true
