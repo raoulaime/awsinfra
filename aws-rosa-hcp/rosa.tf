@@ -41,5 +41,5 @@ module "vpc" {
   source = "terraform-redhat/rosa-hcp/rhcs//modules/vpc"
 
   name_prefix              = "rosa-hcp"
-  availability_zones_count = 3
+  availability_zones_count = length(data.aws_availability_zones.available)
 }
