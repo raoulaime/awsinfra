@@ -85,5 +85,5 @@ data "aws_ami" "ubuntu" {
     values = ["*ubuntu*-amd64-server-*"]
   }
 
-  owners = ["099720109477"]  # Canonical owner ID for Ubuntu AMIs
+  owners = ["099720109477"] # Canonical owner ID for Ubuntu AMIs
 }
